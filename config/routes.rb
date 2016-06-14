@@ -17,8 +17,12 @@ Rails.application.routes.draw do
 
       get 'save_and_query_jsons'
       post 'query_json'
+      post 'query_A_to_B'
       post 'query_A_to_B_with_length'
+      post 'query_all_port_before_A'
+      post 'query_all_port_after_A'
       get 'xml2json'
+      get 'opml2graphviz'
       get  'query_mind_photograph'
     end
   end
@@ -27,6 +31,7 @@ Rails.application.routes.draw do
     collection do
       post 'page_create'
       post 'enter_data'
+      get 'query_json'
     end
   end
 
