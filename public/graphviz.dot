@@ -1,40 +1,13 @@
-digraph {
-	graph [bb="0 0 441 252",
-		layout=dot,
-		rankdir=BT,
-		splines=polyline
-	];
-	node [label="\N"];
-	"%5"	 [IVPosition="-36,-17",
-		label=graphml2hintpipe,
-		shape=rectangle];
-	"%7"	 [IVPosition="97,40",
-		label=hintpipe2graphviz,
-		shape=rectangle];
-	"%5" -> "%7";
-	"%11"	 [IVPosition="273,135",
-		label=hintpipe2chatlog,
-		shape=rectangle];
-	"%5" -> "%11";
-	"%15"	 [IVPosition="-30,183",
-		label=hintpipe2storage,
-		shape=rectangle];
-	"%5" -> "%15";
-	"%25"	 [IVPosition="248,73",
-		label="colored-graphviz ",
-		shape=rectangle];
-	"%7" -> "%25";
-	"%29"	 [IVPosition="269,85",
-		label=graphviz2gml,
-		shape=rectangle];
-	"%7" -> "%29";
-	"%23"	 [IVPosition="97,2",
-		label=chatlog2yaml,
-		shape=rectangle];
-	"%11" -> "%23";
-	"%19"	 [IVPosition="-22,34",
-		label=chapteredtext2json,
-		shape=rectangle];
-	"%19" -> "%15";
-	"%25" -> "%29";
+digraph G {
+  rankdir=BT
+  graph [fontname="simhei" splines="polyline"]
+  edge  [fontname="simhei" arrowsize="0.6"]
+  node  [fontname="simhei" fontsize="9px" shape="note" height="0.1" style="filled" fillcolor="khaki1"]
+   "想基于LeoEditor  编程" -> "实现HelloWorld小程序"
+  "实现HelloWorld 小程序" -> "实现打印当前节点的标题"
+  "实现打印当前节点 的标题" -> "实现打印当前节点的父节点标题"
+  "实现打印当 前节点 的父节点，标题" -> "搞!定"
+  "想基于Leo Editor编程" -> "测试知识点"
+  "测试知识点" -> "测试子知识点"
+  "测试子知识点" -> "搞定！"
 }

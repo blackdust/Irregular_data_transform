@@ -19,13 +19,13 @@ class Graphviz
   hintPipeStr2Obj: (hintPipeStr)->
     regExpEn = "[a-zA-Z0-9]"
     regExpCJKIdeographs = "[㐀-\u4dbe一-\u9ffe]|[\ud840-\ud868\ud86a-\ud86c][\udc00-\udfff]|\ud869[\udc00-\udede\udf00-\udfff]|\ud86d[\udc00-\udf3e\udf40-\udfff]|\ud86e[\udc00-\udc1e]|[\ufa0e\ufa0f\ufa11\ufa13\ufa14\ufa1f\ufa21\ufa23\ufa24\ufa27-\ufa29]"
-    regExpCJKSymbols = "[\u3000-〾？，、“”‘’（）《》—·]"
+    regExpCJKSymbols = "[\u3000-〾？，、“”‘’（）《》—！!| /s]"
     portLabelPattern = regExpEn + "|" + regExpCJKIdeographs + "|" + regExpCJKSymbols
     hintPipePattern = "((" + portLabelPattern + ")+)" + "\\|->\\|" + "((" + portLabelPattern + ")+)?([^\\n]+|)"
     hintPipeObj = {}
     regExpForhintPipe = new RegExp(hintPipePattern, "g")
     regExpMatchResult = regExpForhintPipe.exec(hintPipeStr)
-    
+    console.log(regExpMatchResult)
     checkColorValueResult = @checkColorValue(regExpMatchResult[0])
   
     if regExpMatchResult != null
