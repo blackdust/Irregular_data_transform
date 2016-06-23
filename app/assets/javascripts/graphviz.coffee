@@ -26,6 +26,7 @@ class Graphviz
     regExpForhintPipe = new RegExp(hintPipePattern, "g")
     regExpMatchResult = regExpForhintPipe.exec(hintPipeStr)
     console.log(regExpMatchResult)
+    
     checkColorValueResult = @checkColorValue(regExpMatchResult[0])
   
     if regExpMatchResult != null
