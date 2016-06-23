@@ -132,7 +132,7 @@ class Graphviz
     '  rankdir=' + graphDir + '\n' +
     '  graph [fontname="simhei" splines="polyline"]\n' +
     '  edge  [fontname="simhei" arrowsize="0.6"]\n' +
-    '  node  [fontname="simhei" fontsize="9px" shape="note" height="0.1" style="filled" fillcolor="khaki1"]\n'+
+    '  node  [fontname="simhei" fontsize="9" shape="rectangle" height="0.1" style="filled" fillcolor="#ffcc00"]\n'+
     dotEdges +
     "}\n"
 
