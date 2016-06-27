@@ -1,7 +1,7 @@
-
-.text-conversion{
+@mixin all_style(){
   width: 88%;
   margin: 0 auto;
+  font-family: 微软雅黑;
   .head-line{
     margin: 10px;
   }
@@ -28,6 +28,10 @@
       float:right;
       margin-right: 10px;
     }
+    .float-right-bottom-button{
+      float:right;
+      margin-right: 10px;
+    }
   }
 
   .body-footer-line{
@@ -40,9 +44,21 @@
 
   .footer-button{
     margin-top: 10px;
+    .open-permit-operation{
+      margin-top: 10px;
+      font-size: 14px;
+    }
   }
 
   .footer-line{
     margin-top: 150px;
   }
+}
+
+.text-conversion{
+  @include all_style;
+}
+
+.article_insert_page{
+  @include all_style;
 }

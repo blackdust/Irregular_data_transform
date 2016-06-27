@@ -24,6 +24,7 @@ Rails.application.routes.draw do
       get 'xml2json'
       get 'opml2graphviz'
       get  'query_mind_photograph'
+      get 'match_words'
     end
   end
 
@@ -32,6 +33,18 @@ Rails.application.routes.draw do
       post 'page_create'
       post 'enter_data'
       get 'query_json'
+    end
+  end
+
+  resources :match_words do
+    collection do
+      get 'insert_word'
+      post 'insert_word_list'
+      delete 'delete_word'
+      get 'article'
+      post 'article_insert'
+      post 'analysis_article'
+      post 'save_combination'
     end
   end
 

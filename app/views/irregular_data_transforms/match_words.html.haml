@@ -1,0 +1,29 @@
+.article_insert_page
+  %h2{style: "font-size: 18px;"} 文章分词
+  .body-top-line
+    %hr
+  .body
+    .part-left
+      %textarea{style:"resize:none;",rows:"20", cols:"70"}
+    .part-center
+      %hr{align: "center", width: "1px",size:"310px"}
+    .part-right
+      %textarea{style:"resize:none;",disabled: "disabled", rows:"20", cols:"70"}
+    .float-right-bottom-button
+      %button.disintegration-article{disabled: true, title: "将文章分解成一个词表", data:{title_type:"word_insert"}} 文章分词
+  .body-footer-line
+    %hr
+
+  .footer-button
+    .main-operation-button
+      %button.submit-article{disabled: false,title: "将输入的文章进行保存"} 保存文章
+      %button.submit-word{disabled: true,title: "将输入的文章进行保存"} 保存单词
+      %button.match-word{disabled: true,title: "单词两两组合"} 单词配对
+      %button.submit-word-combination{disabled: true,title: "保存单词组列表"} 保存单词组
+    .open-permit-operation
+      %a.open-article-permit{href: "javascript:void(0);"} 我要保存文章
+      %a.open-word-permit{href: "javascript:void(0);"} 我要保存单词
+      %a.open-match-permit{href: "javascript:void(0);"} 我要进行单词配对
+      %a.open-combination-permit{href: "javascript:void(0);"} 我要保存单词组
+  .footer-line
+    %hr
