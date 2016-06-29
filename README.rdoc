@@ -1,28 +1,12 @@
-== README
+== 部署说明
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+操作系统：linux-debian7-64bit
+依赖程序：rvm nodejs mongodb2.6 bundle
+参考链接：https://github.com/mindpin/docs/wiki/%E4%BB%8E%E5%A4%B4%E5%AE%89%E8%A3%85-debian7---%E5%BC%80%E5%8F%91-%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83%E6%AD%A5%E9%AA%A4
 
-Things you may want to cover:
+启动命令: 
+1 git clone https://github.com/blackdust/Irregular_data_transform.git
+2 bundle install
+3 rails s -b 0 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+然后访问localhost:3000/lists
